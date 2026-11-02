@@ -1,0 +1,28 @@
+{
+  "globalHeaders": {
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Cross-Origin-Embedder-Policy": "require-corp",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+  },
+  "routes": [
+    {
+      "route": "/libreoffice-wasm/soffice.wasm.gz",
+      "headers": {
+        "Content-Type": "application/wasm",
+        "Content-Encoding": "gzip",
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "route": "/libreoffice-wasm/soffice.data.gz",
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Encoding": "gzip",
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    }
+  ],
+  "mimeTypes": {
+    ".wasm": "application/wasm"
+  }
+}
